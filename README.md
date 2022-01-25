@@ -29,8 +29,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## How to Run
 
 -git clone this project in your new folder
+
 -verify if you don't have node or npm
+
 -install NPM (to get package) "npm install"
+
 -you should get a new folder (node_module)
+
+-open project and run "ng serve"
 
 HAVE FUN !
