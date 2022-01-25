@@ -4,6 +4,11 @@
 
 <h4>Liste de contenu de day 4: Matin</h4>
 <ul>
-    <li *ngFor="let s of contenu">{{s}}</li>
+    <li *ngFor="let s of contenu">{{s | uppercase | prerfixNg}}</li>
 </ul>
-<button class=" btn btn-primary">Cliquer pour afficher un message</button>
+<button (click)="info()" class="btn btn-primary">Cliquer pour afficher un message</button>
+
+<h3>Liste des étudiants</h3>
+<ul>
+    <li *ngFor="let e of etudiant">{{e}}</li>
+</ul>
