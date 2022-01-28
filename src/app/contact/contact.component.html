@@ -1,1 +1,10 @@
-<h2>Composant CONTACT</h2>
+<h2 align="center" >Composant CONTACT</h2>
+
+    <input type="text" [(ngModel)]="providerNom" />
+    <br/> <br/> 
+    <input type="text" [(ngModel)]="providerEmail" />
+    <br/>
+Infos Provider : {{providerNom}}-{{providerEmail}} 
+<br/> 
+<button (click)="info()" class="btn btn-success">Click</button>
+<hr>    
