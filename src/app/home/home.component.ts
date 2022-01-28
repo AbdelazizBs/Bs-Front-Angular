@@ -20,11 +20,30 @@ constructor(private service : EtudiantService) {
   }
 
 etudiant : string[] =[];
+users : any;
+providers : any;
   //cette méthode s'execute directement aprés le constructeur
   ngOnInit(): void {
     console.log("ngOnInit!");
     //console.log(this.service.listCandidats());
     this.etudiant=this.service.listCandidats();
+
+
+    //recuperation des données de l'api BsApi
+    this.service.lisProviders().subscribe(
+      res =>{
+        console.log(res);
+         this.providers =res;
+      }
+    );
+
+    //recuperation des données fake : https://jsonplaceholder.typicode.com/users
+    this.service.lisUsers().subscribe(
+      data => {
+    console.log(data);
+    this.users=data;
+      
+    }); 
   }
 info(){
   alert('Bienvenue a Angular')
