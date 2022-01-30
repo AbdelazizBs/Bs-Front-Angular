@@ -21,4 +21,9 @@ export class ContactComponent implements OnInit {
     //Save dans BD
     // ...
   }
+
+
+  submit( f:any){
+alert(f.value.nomEtudiant+ " " + f.value.prenomEtudiant );
+  }
 }
