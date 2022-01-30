@@ -23,3 +23,18 @@
     <td>{{p.email}}</td>
 </tr>
 </table>
+
+
+<h3>Ajout  Provider</h3>
+<form #formProvider="ngForm" (ngSubmit)="submitProvider(formProvider)">
+    <label>Name : </label><input type="text" ngModel name="nameProvider">
+    <br>
+    <br>
+    <label>Address  : </label><input type="text" ngModel name="addressProvider">
+    <br>
+    <br>
+    <label>Email  : </label><input type="text" ngModel name="emailProvider">
+    <br>
+    <br>
+    <input type="submit" value="Ajouter" class="btn btn-success">
+</form>

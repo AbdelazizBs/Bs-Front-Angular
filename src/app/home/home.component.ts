@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Provider } from '@angular/core';
 import { EtudiantService } from '../services/etudiant.service';
 @Component({
   selector: 'app-home',
@@ -48,4 +48,23 @@ providers : any;
 info(){
   alert('Bienvenue a Angular')
 }
+
+
+submitProvider(formProvider: any){
+
+  alert(formProvider.value.nameProvider + " "+ formProvider.value.addressProvider  )
+let provider = {
+  name:formProvider.value.nameProvider,
+  address: formProvider.value.addressProvider ,
+  email : formProvider.value.emailProvider 
+}
+
+  this.service.addProvider(provider).subscribe(
+    data => {
+      console.log(data);
+      alert('Ajout avec succees');
+    }
+  );
+}
+
 }
